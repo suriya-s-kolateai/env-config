@@ -1,0 +1,23 @@
+spring:
+  profiles: test
+
+server:
+  port: 6000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+auth0:
+  domain: test-noobiedev.us.auth0.com
+  issuer: https://test-noobiedev.us.auth0.com/
+  audience: https://test-noobiedev.us.auth0.com/api/v2/
+  token-validation:
+    enabled: true
+
+redis:
+  host: test-redis
+  port: 6379
